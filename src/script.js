@@ -1,8 +1,9 @@
+import imagePath from '/images/diffuse_map.jpg'
 import './style.css'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
 import {
-    ModifierStack,
+    ModifierStack,v
     Twist,
     Noise,
     Cloth,
@@ -13,6 +14,7 @@ import {
     Vector3,
     ModConstant
   } from "three.modifiers";
+
 
 // Debug
 const gui = new dat.GUI()
@@ -30,6 +32,7 @@ const geometry = new THREE.TorusGeometry( .7, .2, 16, 100 );
 
 const material = new THREE.MeshBasicMaterial()
 material.color = new THREE.Color(0xff0000)
+
 
 // Mesh
 const sphere = new THREE.Mesh(geometry,material)

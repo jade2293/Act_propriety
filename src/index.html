@@ -70,8 +70,8 @@
 
       function initMesh() {
         //plane
-        var diffuse_map = new THREE.TextureLoader().load("assets/images/diffuse_map.jpg");
-        var roughness_map = new THREE.TextureLoader().load("images/roughness_map.jpg");
+        var diffuse_map = new THREE.TextureLoader().load(imagePath)
+        var roughness_map = new THREE.TextureLoader().load("assets/images/roughness_map.jpg");
         plane = new THREE.Mesh(
           new THREE.PlaneGeometry(350, 430, 20, 20, true),
           new THREE.MeshPhysicalMaterial({
