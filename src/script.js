@@ -1,7 +1,18 @@
 import './style.css'
-import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import * as dat from 'dat.gui'
+import {
+    ModifierStack,
+    Twist,
+    Noise,
+    Cloth,
+    UserDefined,
+    Taper,
+    Break,
+    Bloat,
+    Vector3,
+    ModConstant
+  } from "three.modifiers";
 
 // Debug
 const gui = new dat.GUI()
@@ -59,7 +70,7 @@ window.addEventListener('resize', () =>
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
 camera.position.x = 0
 camera.position.y = 0
 camera.position.z = 2
